@@ -1,20 +1,10 @@
-class Persona {
-    //Atributos:
-    //private altura: number;
-    //private peso: number;
-    private nombre: string;
-    //private genero: string;
-    private dni: number;
-
+var Persona = /** @class */ (function () {
     //Funcion Constructora:
-
-    constructor(nombre: string, dni: number) {
+    function Persona(nombre, dni) {
         this.nombre = nombre;
         this.dni = dni;
     }
-
     //Metodos:
-
     /*public getAltura(): number {
         return this.altura;
     }
@@ -22,39 +12,30 @@ class Persona {
     public getPeso(): number {
         return this.peso;
     }*/
-
-    public getNombre(): string {
+    Persona.prototype.getNombre = function () {
         return this.nombre;
-    }
-
+    };
     /*public getGenero(): string {
         return this.genero;
     }*/
-
-    public getDni(): number {
+    Persona.prototype.getDni = function () {
         return this.dni;
-    }
-
-    public caminar(): string {
+    };
+    Persona.prototype.caminar = function () {
         return "Caminando";
-    }
-
-    public hablar(): string {
+    };
+    Persona.prototype.hablar = function () {
         return "Hablando";
-    }
-
-    public dormir(): string {
+    };
+    Persona.prototype.dormir = function () {
         return "Durmiendo";
-    }
-
-    public setNombre(nombre: string): void {
+    };
+    Persona.prototype.setNombre = function (nombre) {
         this.nombre = nombre;
-    }
-
-}
-
-const persona1 = new Persona("Antonela", 33681920);
-
+    };
+    return Persona;
+}());
+var persona1 = new Persona("Antonela", 33681920);
 console.log("El nombre de la persona es " + persona1.getNombre() + " y su DNI es " + persona1.getDni());
 persona1.setNombre("Carla");
 console.log("Se modifico el nombre de la persona y ahora es: " + persona1.getNombre());
