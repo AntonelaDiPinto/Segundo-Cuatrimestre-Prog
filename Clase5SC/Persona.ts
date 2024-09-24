@@ -1,35 +1,18 @@
 class Persona {
     //Atributos:
-    //private altura: number;
-    //private peso: number;
     private nombre: string;
-    //private genero: string;
     private dni: number;
 
     //Funcion Constructora:
-
     constructor(nombre: string, dni: number) {
         this.nombre = nombre;
         this.dni = dni;
     }
 
     //Metodos:
-
-    /*public getAltura(): number {
-        return this.altura;
-    }
-
-    public getPeso(): number {
-        return this.peso;
-    }*/
-
     public getNombre(): string {
         return this.nombre;
     }
-
-    /*public getGenero(): string {
-        return this.genero;
-    }*/
 
     public getDni(): number {
         return this.dni;
