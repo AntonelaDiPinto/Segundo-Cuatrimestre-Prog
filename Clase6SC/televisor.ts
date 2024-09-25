@@ -16,7 +16,7 @@ class Televisor {
 
     prenderApagar(): void {
         if(this.estaPrendido) {
-            this.estaPrendido = false
+            this.estaPrendido = false;
         } else {
             this.estaPrendido = true;
         }
@@ -37,10 +37,7 @@ let primerTelevisor = new Televisor(10,25);
 
 let segundoTelevisor = new Televisor(50, 20);
 
-primerTelevisor.prenderApagar();
-
-console.log(primerTelevisor)
-
+//Completar este ejercicio con la implementacion de la clase Decodificador
 
 
 
