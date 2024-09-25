@@ -1,16 +1,19 @@
 class Televisor {
     //Estados o Variables o Atributos
+    
     private estaPrendido: boolean = true;
     private volumenActual: number;
     private canalActual: number;
 
     // Funcion Constructora
+
     constructor(volumenActual: number, canalActual:number){
         this.volumenActual = volumenActual;
         this.canalActual = canalActual;
     }
 
     //Metodos
+
     prenderApagar(): void {
         if(this.estaPrendido) {
             this.estaPrendido = false
