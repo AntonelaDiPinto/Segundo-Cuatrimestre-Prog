@@ -1,21 +1,16 @@
 class Televisor {
-    //estados o variables o atributos
-    private estaPrendido : boolean = true;
+    //Estados o Variables o Atributos
+    private estaPrendido: boolean = true;
     private volumenActual: number;
-    private canalActual : number;
+    private canalActual: number;
 
-    //funcion constructora
-    // constructor(volumen: number, canal:number){
-    //     this.volumenActual = volumen;
-    //     this.canalActual = canal;
-    // }
-
+    // Funcion Constructora
     constructor(volumenActual: number, canalActual:number){
         this.volumenActual = volumenActual;
         this.canalActual = canalActual;
     }
 
-    //metodos
+    //Metodos
     prenderApagar(): void {
         if(this.estaPrendido) {
             this.estaPrendido = false
@@ -24,16 +19,16 @@ class Televisor {
         }
     }
 
-    subirVolumen() : void {
+    subirVolumen(): void {
         this.volumenActual = this.volumenActual + 1;
     }
 
-    subirCanal() : void {
+    subirCanal(): void {
         this.canalActual = this.canalActual + 1;
     }
 }
 
-//instancias
+//Instancias
 
 let primerTelevisor = new Televisor(10,25);
 
