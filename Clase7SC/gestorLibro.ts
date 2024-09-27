@@ -28,11 +28,18 @@ export class GestorLibros {
      }
 
     /*public eliminarLibro(libroEliminado: Libro): void {
-        if(libroEliminado != undefined && this.listaLibros.includes(libroEliminado)) {
+        if(libroEliminado != undefined && this.listaLibros.includes(libroEliminado)) { // El error parece estar en el includes
             const posicionLibro: number = this.listaLibros.indexOf(libroEliminado);
             this.listaLibros.splice(posicionLibro, 1); // Corregir el error
         }
     }*/
+
+    public eliminarLibro(libroEliminado: Libro): void {
+        if(libroEliminado != undefined) {
+        const posicionLibro: number = this.listaLibros.indexOf(libroEliminado);
+        this.listaLibros.splice(posicionLibro, 1);
+      }
+    }
 
     public agregarLibro(titulo: string, autor: string, editorial: string): void {
         let nuevoLibro: Libro = new Libro(titulo, autor, editorial); // Controlar Indefinidos.

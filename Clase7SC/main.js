@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var libro_1 = require("./libro");
+var gestorLibro_1 = require("./gestorLibro");
+var MartinFierro = new libro_1.Libro("Martín Fierro", "José Hernández", "Alianza Editorial");
+var Yerma = new libro_1.Libro("Yerma", "Federico García Lorca", "Bureau Editor");
+var HabitosAtomicos = new libro_1.Libro("Hábitos Atómicos", "James Clear", "Diana");
+var GestorLibroTandil = new gestorLibro_1.GestorLibros("Gestoria Olavarria");
+GestorLibroTandil.agregarLibro("Martín Fierro", "José Hernández", "Alianza Editorial");
+GestorLibroTandil.agregarLibro("Yerma", "Federico García Lorca", "Bureau Editor");
+GestorLibroTandil.agregarLibro("Hábitos Atómicos", "James Clear", "Diana");
+console.log(GestorLibroTandil.getlistaLibros());
+GestorLibroTandil.eliminarLibro(Yerma);
+console.log(GestorLibroTandil.getlistaLibros());
