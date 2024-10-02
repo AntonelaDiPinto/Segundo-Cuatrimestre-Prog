@@ -1,5 +1,5 @@
 
-import { Futbolista } from "./Futbolistas";
+import { Futbolista } from "./Futbolista";
 import { Masajista } from "./Masajista";
 import { Entrenador } from "./Entrenador";
 
@@ -39,10 +39,6 @@ export class SeleccionFutbol {
         this.masajista = masajista;
     }
 
-    public setFutbolista(futbolista: Futbolista[]): void {
-        this.futbolistas = futbolista;
-    }
-
     public incorporarFutbolista(nombre: string, apellido: string, pasaporte: number, fechaNacimiento: string, numeroCamiseta: number, posicion: string): void {
         let nuevoFutbolista: Futbolista = new Futbolista(nombre, apellido, pasaporte, fechaNacimiento, numeroCamiseta, posicion); 
             this.futbolistas.push(nuevoFutbolista);
@@ -55,8 +51,7 @@ export class SeleccionFutbol {
 
 // Crear Futbolistas
 
-let futbolista1 = new Futbolista("Genaro", "Arouxet", 36745322, "1996-06-19", 8, "Delantero");
-let futbolista2 = new Futbolista("Valentino", "Emiliozzi", 35125896, "1995-02-08", 10, "Central");
+
 
 // Crear Seleccion de Futbol
 
