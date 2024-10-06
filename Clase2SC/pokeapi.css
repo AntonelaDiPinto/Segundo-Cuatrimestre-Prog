@@ -34,136 +34,51 @@ body {
 
 .contenido {
     display: flex;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.contenido:hover {
-    box-shadow: 10px 40px 50px rgba(36, 36, 36, 0.5);
+    justify-content: center;
+    align-items: center;
 }
 
 .pokemon-imagen {
-    padding-inline: 1rem;
     display: flex;
     justify-content: center;
+    transition: width 2s, height 2s, transform 1s;
 }
 
-.pokemon-imagen img {
-    width: 100%;
-    max-width: 6rem;
-}
-
-.pokemon-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-inline: 1rem;
-    align-items: center;
-    text-align: center;
+.pokemon-imagen:hover {
+    transform: rotate(360deg);
 }
 
 .pokemon-id {
-    background-color: rgba(184, 174, 174, 0.4);
-    padding: .25rem .5rem;
-    border-radius: 100vmax;
-    font-size: .75rem;
+    font-size: 20px;
     font-weight: 500;
+    margin: auto;   
 }
 
-.pokemon-nombre {
-    font-size: 1.4rem;
+h2 {
+    font-size: 30px;
+    margin-left: 8%;
 }
 
 .pokemon-tipos {
     display: flex;
-    gap: .5rem;
-    font-size: .75rem;
+    gap: 5px;
+    font-size: 40px;
     font-weight: 500;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.tipo {
-    padding: .25rem .5rem;
-    border-radius: 100vmax;
-}
-
 .pokemon-stats {
     display: flex;
-    gap: 1rem;
-    font-size: .85rem;
+    gap: 16px;
+    font-size: 15px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    justify-content: space-around;
 }
 
 .stat {
     background-color: rgba(184, 174, 174, 0.4);
-    padding: .25rem .5rem;
-    border-radius: 100vmax;
-}
-
-.normal {
-    background-color: rgb(168, 168, 120);
-}
-
-.fire {
-    background-color:rgb(240, 128, 48);
-}
-
-.water {
-    background-color: rgb(104, 144, 240);
-}
-
-.grass {
-    background-color: rgb(120, 200, 80);
-}
-
-.electric {
-    background-color: rgb(248, 208, 48);
-}
-
-.ice {
-    background-color: rgb(152, 216, 216);
-}
-
-.fighting {
-    background-color: rgb(192, 48, 40);
-}
-
-.poison {
-    background-color:rgb(160, 64, 160);
-}
-
-.ground {
-    background-color:rgb(224, 192, 104);
-}
-
-.flying {
-    background-color:rgb(168, 144, 240);
-}
-
-.psychic {
-    background-color: rgb(248, 88, 136);
-}
-
-.bug {
-    background-color: rgb(168, 184, 32);
-}
-
-.rock {
-    background-color: rgb(184, 160, 56);
-}
-
-.ghost {
-    background-color: rgb(112, 88, 152);
-}
-
-.dragon {
-    background-color: rgb(112, 56, 248);
-}
-
-.steel {
-    background-color: rgb(184, 184, 208);
-}
-
-.fairy {
-    background-color: rgb(240, 182, 188);
+    padding: 4px 10px;
+    border-radius: 25px;
 }
