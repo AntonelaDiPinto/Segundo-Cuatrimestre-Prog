@@ -1,17 +1,20 @@
 abstract class Notificacion {
+    protected destinatario: string;
+
+    constructor(destinatario: string) {
+        this.destinatario = destinatario;
+    }
     
     abstract enviar(mensaje:string): void;
 }
 
 class Email extends Notificacion {
     private direccionCorreo: string;
-    private destinatario: string;
     private asunto: string;
 
     constructor(direccionCorreo: string, destinatario: string, asunto: string){
-        super();
+        super(destinatario);
         this.direccionCorreo = direccionCorreo;
-        this.destinatario = destinatario;
         this.asunto = asunto;
 
     }
@@ -27,26 +30,31 @@ class Email extends Notificacion {
 
 class SMS extends Notificacion {
     private numeroTelefono: number;
-    private nombre: string;
 
-    constructor(numeroTelefono: number, nombre: string) {
-        super();
+    constructor(numeroTelefono: number, destinatario: string) {
+        super(destinatario);
         this.numeroTelefono = numeroTelefono;
-        this.nombre = nombre;
     }
   
     enviar(mensaje: string): void {
         console.log(`SMS: \n
                      Número de teléfono del destinatario: ${this.numeroTelefono} \n 
-                     Destinatario: ${this.nombre} \n 
+                     Destinatario: ${this.destinatario} \n 
                      Mensaje: ${mensaje}`);
     }
 }
 
 class PushNotificacion extends Notificacion {
+    private aplicacion: string;
+
+    constructor(aplicacion: string, destinatario: string){
+        super(destinatario);
+        this.aplicacion = aplicacion;
+    }
 
     enviar(mensaje: string): void {
-       console.log(`${mensaje}`)
+       console.log(`PUSH NOTIFICACIÓN:\n
+                   ${this.aplicacion}: Hola ${this.destinatario} ${mensaje}`)
     }
 }
 
@@ -56,5 +64,5 @@ notificacionEmail.enviar("Buenas tardes. Mi nombre es Ayelen Gómez y quisiera c
 let notificacionSMS = new SMS(2284593503, "Rosana Benitez");
 notificacionSMS.enviar("Hola Rosana ¿cómo estás?. Te escribo para avisarte que hoy no se dicta la clase de yoga por cuestiones personales. Nos vemos el viernes. Saludos.")
 
-let pushNotificacion = new PushNotificacion();
-pushNotificacion.enviar("Bienvenido a Nuestro Portal");
+let pushNotificacion = new PushNotificacion("Pedidos YA", "Facundo Arouxet");
+pushNotificacion.enviar("Promociones en toda la APP. Aprovecha desde YA a comprar lo necesario para disfrutar con promociones en todas las categorias.");

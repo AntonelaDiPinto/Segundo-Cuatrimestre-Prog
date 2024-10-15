@@ -14,16 +14,16 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var Notificacion = /** @class */ (function () {
-    function Notificacion() {
+    function Notificacion(destinatario) {
+        this.destinatario = destinatario;
     }
     return Notificacion;
 }());
 var Email = /** @class */ (function (_super) {
     __extends(Email, _super);
     function Email(direccionCorreo, destinatario, asunto) {
-        var _this = _super.call(this) || this;
+        var _this = _super.call(this, destinatario) || this;
         _this.direccionCorreo = direccionCorreo;
-        _this.destinatario = destinatario;
         _this.asunto = asunto;
         return _this;
     }
@@ -34,30 +34,31 @@ var Email = /** @class */ (function (_super) {
 }(Notificacion));
 var SMS = /** @class */ (function (_super) {
     __extends(SMS, _super);
-    function SMS(numeroTelefono, nombre) {
-        var _this = _super.call(this) || this;
+    function SMS(numeroTelefono, destinatario) {
+        var _this = _super.call(this, destinatario) || this;
         _this.numeroTelefono = numeroTelefono;
-        _this.nombre = nombre;
         return _this;
     }
     SMS.prototype.enviar = function (mensaje) {
-        console.log("SMS: \n\n                     N\u00FAmero de tel\u00E9fono del destinatario: ".concat(this.numeroTelefono, " \n \n                     Destinatario: ").concat(this.nombre, " \n \n                     Mensaje: ").concat(mensaje));
+        console.log("SMS: \n\n                     N\u00FAmero de tel\u00E9fono del destinatario: ".concat(this.numeroTelefono, " \n \n                     Destinatario: ").concat(this.destinatario, " \n \n                     Mensaje: ").concat(mensaje));
     };
     return SMS;
 }(Notificacion));
 var PushNotificacion = /** @class */ (function (_super) {
     __extends(PushNotificacion, _super);
-    function PushNotificacion() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function PushNotificacion(aplicacion, destinatario) {
+        var _this = _super.call(this, destinatario) || this;
+        _this.aplicacion = aplicacion;
+        return _this;
     }
     PushNotificacion.prototype.enviar = function (mensaje) {
-        console.log("".concat(mensaje));
+        console.log("PUSH NOTIFICACI\u00D3N:\n\n                   ".concat(this.aplicacion, ": Hola ").concat(this.destinatario, " ").concat(mensaje));
     };
     return PushNotificacion;
 }(Notificacion));
 var notificacionEmail = new Email("dipinto-antonella@hotmail.com", "Di Pinto Antonela", "Consulta Cronograma de Clases");
-//notificacionEmail.enviar("Buenas tardes. Mi nombre es Ayelen Gómez y quisiera consultar sobre el cronograma de clases \n de la asignatura Diagnóstico por Imagénes del segundo cuatrimestre de la carrera de Medicina.");
+notificacionEmail.enviar("Buenas tardes. Mi nombre es Ayelen Gómez y quisiera consultar sobre el cronograma de clases \n de la asignatura Diagnóstico por Imagénes del segundo cuatrimestre de la carrera de Medicina.");
 var notificacionSMS = new SMS(2284593503, "Rosana Benitez");
-//notificacionSMS.enviar("Hola Rosana ¿cómo estás?. Te escribo para avisarte que hoy no se dicta la clase de yoga por cuestiones personales. Nos vemos el viernes. Saludos.")
-var pushNotificacion = new PushNotificacion();
-pushNotificacion.enviar("Bienvenido a Nuestro Portal");
+notificacionSMS.enviar("Hola Rosana ¿cómo estás?. Te escribo para avisarte que hoy no se dicta la clase de yoga por cuestiones personales. Nos vemos el viernes. Saludos.");
+var pushNotificacion = new PushNotificacion("Pedidos YA", "Facundo Arouxet");
+pushNotificacion.enviar("Promociones en toda la APP. Aprovecha desde YA a comprar lo necesario para disfrutar con promociones en todas las categorias.");
