@@ -31,7 +31,12 @@ var Televesion = /** @class */ (function (_super) {
         this.canal = canal;
     };
     Televesion.prototype.funcionalidadEspecial = function () {
-        console.log("El ".concat(this.getNombre(), " que estaba en el canal ").concat(this.canal, " est\u00E1 cambiando de canal."));
+        if (this.estado) {
+            console.log("El ".concat(this.getNombre(), " que estaba en el canal ").concat(this.canal, " est\u00E1 cambiando de canal."));
+        }
+        else {
+            console.log("No se puede cambiar de canal, el televisor está apagado.");
+        }
     };
     return Televesion;
 }(DispositivoElectronico_1.DispositivoElectronico));

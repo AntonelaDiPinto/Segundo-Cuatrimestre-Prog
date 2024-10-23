@@ -6,12 +6,18 @@ var Radio_1 = require("./Radio");
 var televisorCocina = new Television_1.Televesion("Televisor de la Cocina", false, 13);
 var televisorDormitorio = new Television_1.Televesion("Televisor del Dormitorio", false, 9);
 //Instancias de Radio:
-var radioDisney = new Radio_1.Radio("Disney", false, "FM", 94.3);
-var radioLaRed = new Radio_1.Radio("La Red", false, "AM", 910);
-console.log(televisorCocina.getEstado());
+var radioDisney = new Radio_1.Radio("Radio Disney", false, "FM", 94.3);
+var radioLaRed = new Radio_1.Radio("Radio La Red", false, "AM", 910);
+/*console.log(televisorCocina.getEstado());
 televisorCocina.encender();
+console.log(televisorCocina.getEstado());
 televisorCocina.funcionalidadEspecial();
+televisorCocina.apagar();
+televisorCocina.funcionalidadEspecial();*/
 console.log(radioDisney.getEstado());
-radioLaRed.encender();
+radioDisney.encender();
 console.log(radioDisney.getEstado());
-radioLaRed.funcionalidadEspecial();
+radioDisney.funcionalidadEspecial();
+radioDisney.apagar();
+console.log(radioDisney.getEstado());
+radioDisney.funcionalidadEspecial();

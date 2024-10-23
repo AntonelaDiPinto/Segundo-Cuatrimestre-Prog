@@ -15,6 +15,9 @@ var DispositivoElectronico = /** @class */ (function () {
     DispositivoElectronico.prototype.setNombre = function (nombre) {
         this.nombre = nombre;
     };
+    DispositivoElectronico.prototype.setEstado = function (estado) {
+        this.estado = estado;
+    };
     DispositivoElectronico.prototype.encender = function () {
         this.estado = true;
         console.log(this.nombre + " está encendido.");

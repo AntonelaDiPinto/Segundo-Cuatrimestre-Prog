@@ -38,7 +38,12 @@ var Radio = /** @class */ (function (_super) {
         this.emisora = emisora;
     };
     Radio.prototype.funcionalidadEspecial = function () {
-        console.log("La radio en la que se estaba escuchando radio ".concat(this.getNombre(), " ").concat(this.frecuencia, " ").concat(this.emisora, " est\u00E1 cambiando de emisora."));
+        if (this.estado) {
+            console.log("La radio en la que se estaba escuchando radio ".concat(this.getNombre(), " ").concat(this.frecuencia, " ").concat(this.emisora, " est\u00E1 cambiando de emisora."));
+        }
+        else {
+            console.log("No se puede cambiar de emisora, la radio está apagada.");
+        }
     };
     return Radio;
 }(DispositivoElectronico_1.DispositivoElectronico));

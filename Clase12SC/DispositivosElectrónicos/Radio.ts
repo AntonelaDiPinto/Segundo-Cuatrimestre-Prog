@@ -27,6 +27,10 @@ export class Radio extends DispositivoElectronico {
     }
 
     public funcionalidadEspecial(): void {
+        if(this.estado) { 
         console.log(`La radio en la que se estaba escuchando radio ${this.getNombre()} ${this.frecuencia} ${this.emisora} está cambiando de emisora.`)
+        } else {
+            console.log("No se puede cambiar de emisora, la radio está apagada.");
+        }
     }
 }

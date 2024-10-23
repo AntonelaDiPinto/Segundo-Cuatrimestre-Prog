@@ -17,6 +17,10 @@ export class Televesion extends DispositivoElectronico  {
     }
 
     public funcionalidadEspecial(): void {
-        console.log(`El ${this.getNombre()} que estaba en el canal ${this.canal} está cambiando de canal.`);
+        if(this.estado) { 
+            console.log(`El ${this.getNombre()} que estaba en el canal ${this.canal} está cambiando de canal.`);
+        } else {
+            console.log("No se puede cambiar de canal, el televisor está apagado.");
+        }
     }
 }

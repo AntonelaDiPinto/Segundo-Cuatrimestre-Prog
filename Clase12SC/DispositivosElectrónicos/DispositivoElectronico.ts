@@ -1,6 +1,6 @@
 export abstract class DispositivoElectronico {
-    private nombre: string;
-    private estado: boolean;
+    protected nombre: string;
+    protected estado: boolean;
 
     constructor(nombre: string, estado: boolean) {
         this.nombre = nombre;
@@ -18,6 +18,10 @@ export abstract class DispositivoElectronico {
     public setNombre(nombre: string): void {
         this.nombre = nombre;
     } 
+
+    public setEstado(estado: boolean): void {
+        this.estado = estado;
+    }
 
     public encender(): void {
         this.estado = true;

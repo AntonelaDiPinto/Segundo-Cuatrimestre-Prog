@@ -14,9 +14,15 @@ let radioLaRed: Radio = new Radio("La Red", false, "AM", 910);
 
 console.log(televisorCocina.getEstado());
 televisorCocina.encender();
+console.log(televisorCocina.getEstado());
+televisorCocina.funcionalidadEspecial();
+televisorCocina.apagar();
 televisorCocina.funcionalidadEspecial();
 
 console.log(radioDisney.getEstado());
-radioLaRed.encender();
+radioDisney.encender();
 console.log(radioDisney.getEstado());
-radioLaRed.funcionalidadEspecial();
+radioDisney.funcionalidadEspecial();
+radioDisney.apagar();
+console.log(radioDisney.getEstado());
+radioDisney.funcionalidadEspecial();
