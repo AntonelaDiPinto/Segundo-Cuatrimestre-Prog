@@ -16,7 +16,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Circulo = void 0;
-var Figura_1 = require("./Figura");
+var Figura2D_1 = require("./Figura2D");
 var Circulo = /** @class */ (function (_super) {
     __extends(Circulo, _super);
     function Circulo(radio, nombre) {
@@ -37,5 +37,5 @@ var Circulo = /** @class */ (function (_super) {
         return 2 * Math.PI * this.radio;
     };
     return Circulo;
-}(Figura_1.Figura));
+}(Figura2D_1.Figura2D));
 exports.Circulo = Circulo;

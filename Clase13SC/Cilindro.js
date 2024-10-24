@@ -15,34 +15,19 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Triangulo = void 0;
-var Figura2D_1 = require("./Figura2D");
-var Triangulo = /** @class */ (function (_super) {
-    __extends(Triangulo, _super);
-    function Triangulo(base, altura, nombre) {
+exports.Cilindro = void 0;
+var Figura3D_1 = require("./Figura3D");
+var Cilindro = /** @class */ (function (_super) {
+    __extends(Cilindro, _super);
+    function Cilindro(nombre, base, altura) {
         var _this = _super.call(this, nombre) || this;
         _this.base = base;
         _this.altura = altura;
         return _this;
     }
-    Triangulo.prototype.getBase = function () {
-        return this.base;
+    Cilindro.prototype.getVolumen = function () {
+        return this.base.getArea() * this.altura;
     };
-    Triangulo.prototype.getAltura = function () {
-        return this.altura;
-    };
-    Triangulo.prototype.setBase = function (base) {
-        this.base = base;
-    };
-    Triangulo.prototype.setAltura = function (altura) {
-        this.altura = altura;
-    };
-    Triangulo.prototype.getArea = function () {
-        return this.base * this.altura / 2;
-    };
-    Triangulo.prototype.getPerimetro = function () {
-        return 3 * this.base;
-    };
-    return Triangulo;
-}(Figura2D_1.Figura2D));
-exports.Triangulo = Triangulo;
+    return Cilindro;
+}(Figura3D_1.Figura3D));
+exports.Cilindro = Cilindro;

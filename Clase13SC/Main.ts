@@ -2,6 +2,7 @@ import { Circulo } from "./Circulo";
 import { Rectangulo } from "./Rectangulo";
 import { Triangulo } from "./Triangulo";
 import { Figura2D } from "./Figura2D";
+import { Cilindro } from "./Cilindro";
 
 let CirculoGrande: Circulo = new Circulo(2, "Circulo Grande");
 
@@ -22,3 +23,7 @@ figura2.setNombre("Circulo más grande");
 console.log(figura2.getNombre());
 
 console.log(((figura2) as Circulo).getRadio());
+
+let cilindro1: Cilindro = new Cilindro("Cilindro Prueba", CirculoGrande, 10);
+
+console.log(cilindro1.getVolumen());
