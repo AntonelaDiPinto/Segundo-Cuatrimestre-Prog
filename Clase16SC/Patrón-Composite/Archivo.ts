@@ -13,7 +13,27 @@ export class Archivo implements Contenido {
         this.tamanio = tamanio;
     }
 
-    mostrarEstructura(): void {
+    // Getters y Setters
+
+    public getNombre(): string {
+        return this.nombre;
+    }
+
+    public getTamanio(): number {
+        return this.tamanio;
+    }
+
+    public setNombre(nombre: string) {
+        this.nombre = nombre;
+    }
+
+    public setTamanio(tamanio: number) {
+        this.tamanio = tamanio;
+    }
+
+    // Mostrar detalles de los archivos
+    
+    public mostrarEstructura(): void {
         console.log(`Archivo: ${this.nombre} | Tamaño: ${this.tamanio} KB`);
     }
 }

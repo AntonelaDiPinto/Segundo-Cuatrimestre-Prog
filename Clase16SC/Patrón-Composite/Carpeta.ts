@@ -12,12 +12,24 @@ export class Carpeta implements Contenido {
         this.nombre = nombre;
     }
 
+    // Getters y Setters
+
+    public getNombre(): string {
+        return this.nombre;
+    }
+
+    public setNombre(nombre: string) {
+        this.nombre = nombre;
+    }
+
     // Método para agregar un archivo o carpeta
+    
     public agregar(contenido: Contenido): void {
         this.contenidos.push(contenido);
     }
 
     // Método para eliminar un archivo o carpeta
+
     public eliminar(contenido: Contenido): void {
         const index = this.contenidos.indexOf(contenido);
         if (index > -1) {
@@ -26,7 +38,8 @@ export class Carpeta implements Contenido {
     }
 
     // Mostrar detalles de los contenidos de la carpeta
-    mostrarEstructura(): void {
+
+    public mostrarEstructura(): void {
         console.log(`Carpeta: ${this.nombre}`);
         this.contenidos.forEach(contenido => contenido.mostrarEstructura());
     }
