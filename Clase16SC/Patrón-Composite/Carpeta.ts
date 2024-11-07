@@ -1,6 +1,9 @@
-import { Contenido} from "./Interface";
-
 // Clase Carpeta clase compuesta, puede contener archivos y otras carpetas)
+// Crear la clase Carpeta (Componente Compuesto)
+// La Carpeta es un contenedor que puede contener tanto archivos como otras carpetas. Implementa los métodos agregar y eliminar para gestionar su contenido además del método de la interfaz mostrar Información.
+
+import { Contenido } from "./Interfaz";
+
 export class Carpeta implements Contenido {
     private nombre: string;
     private contenidos: Contenido[] = [];
@@ -23,8 +26,8 @@ export class Carpeta implements Contenido {
     }
 
     // Mostrar detalles de los contenidos de la carpeta
-    mostrarContenido(): void {
+    mostrarEstructura(): void {
         console.log(`Carpeta: ${this.nombre}`);
-        this.contenidos.forEach(contenido => contenido.mostrarContenido());
+        this.contenidos.forEach(contenido => contenido.mostrarEstructura());
     }
 }

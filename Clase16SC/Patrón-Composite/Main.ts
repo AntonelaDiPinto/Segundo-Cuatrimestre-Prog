@@ -24,4 +24,4 @@ carpetaPrincipal.agregar(carpeta1);
 carpetaPrincipal.agregar(carpeta2);
 
 // Mostrar estructura del sistema de archivos
-carpeta1.mostrarContenido();
+carpeta1.mostrarEstructura();
