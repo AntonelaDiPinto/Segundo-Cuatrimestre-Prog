@@ -2,7 +2,7 @@
 // Crear la clase Carpeta (Componente Compuesto)
 // La Carpeta es un contenedor que puede contener tanto archivos como otras carpetas. Implementa los métodos agregar y eliminar para gestionar su contenido además del método de la interfaz mostrar Información.
 
-import { Contenido } from "./Interfaz";
+import { Contenido } from "./Interface";
 
 export class Carpeta implements Contenido {
     private nombre: string;

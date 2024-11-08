@@ -16,6 +16,7 @@ const carpeta2 = new Carpeta('Carpeta2');
 carpeta1.agregar(archivo1);
 carpeta2.agregar(archivo2);
 
+
 // Crear un directorio principal
 const carpetaPrincipal = new Carpeta("Carpeta Principal");
 

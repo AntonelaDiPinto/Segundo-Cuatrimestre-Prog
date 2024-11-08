@@ -2,7 +2,7 @@
 // Crear la clase Archivo (Hoja)
 // El Archivo es una clase que implementa la interfaz Información, pero no permite agregar ni eliminar componentes, ya que es una hoja en el patrón Composite.
 
-import { Contenido } from "./Interfaz";
+import { Contenido } from "./Interface";
 
 export class Archivo implements Contenido {
     private nombre: string;
@@ -29,6 +29,14 @@ export class Archivo implements Contenido {
 
     public setTamanio(tamanio: number) {
         this.tamanio = tamanio;
+    }
+
+    public agregar(contenido: Contenido): void {
+        console.log("Un archivo no puede agregar contenido.");
+    }
+
+    public eliminar(contenido: Contenido): void {
+        console.log("Un archivo no puede eliminar contenido.");
     }
 
     // Mostrar detalles de los archivos

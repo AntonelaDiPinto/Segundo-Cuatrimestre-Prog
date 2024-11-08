@@ -12,10 +12,11 @@ var carpeta2 = new Carpeta_1.Carpeta('Carpeta2');
 // Agregar archivos a directorios
 carpeta1.agregar(archivo1);
 carpeta2.agregar(archivo2);
+archivo1.agregar(carpeta2);
 // Crear un directorio principal
 var carpetaPrincipal = new Carpeta_1.Carpeta("Carpeta Principal");
 // Agregar subdirectorios al directorio raíz
 carpetaPrincipal.agregar(carpeta1);
 carpetaPrincipal.agregar(carpeta2);
 // Mostrar estructura del sistema de archivos
-carpeta1.mostrarContenido();
+carpeta1.mostrarEstructura();
